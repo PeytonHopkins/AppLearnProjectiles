@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MultiplayerStart.unity
     guid: dde297fd7e7c3d049b01a5c5a01702ca
   - enabled: 1
-    path: Assets/Scenes/Lobby.unity
+    path: Assets/Scenes/JoinLobby.unity
     guid: b3c9be0ae7e720740841969b8127973c
   - enabled: 1
-    path: Assets/Scenes/Level.unity
+    path: Assets/Scenes/SelectTeam.unity
     guid: 613f7d210af78c049908c66300e8376a
+  - enabled: 1
+    path: Assets/Scenes/Level.unity
+    guid: b674925e26daeea43a5258b27b27ef2d
   m_configObjects: {}

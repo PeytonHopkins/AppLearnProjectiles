@@ -8,7 +8,7 @@ using UnityEngine.UI;
 using System;
 using JetBrains.Annotations;
 using UnityEditor;
-using static Photon.Pun.UtilityScripts.PunTeams;
+using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
@@ -31,9 +31,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
     private int teamMax = 2;
 
     public string selectedTeam = "";
+    public GameObject playerInfoObj;
 
-
-    // Could probably use a dictionary for name/index pairs. Would be able to restructure a lot of this code, it is pretty inefficient currently. I feel as if I could improve a lot upon it. 
     private void Awake()
     {
         currentRoom = PhotonNetwork.CurrentRoom;
@@ -44,6 +43,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         roomName = roomTextObj.GetComponent<TextMeshProUGUI>();
         roomName.text = currentRoom.Name;
         photonView = PhotonView.Get(this);
+        playerInfoObj = GameObject.Find("PlayerInfo");
 
         //GameObject _player = PhotonNetwork.Instantiate(player.name, Vector3.zero, player.transform.rotation);
         //_player.GetComponent<TestingSetup>().isLocalPlayer();
@@ -109,6 +109,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
             if (teamAmount[index] == 2)
             {
                 teamButtons[index].interactable = false;
+            }
+
+            if(teamAmount[0] + teamAmount[1] == 4) // If at max amount of players
+            {
+                Debug.Log("Load Level!");
+                GameObject.FindGameObjectWithTag("PlayerInfo").GetComponent<PlayerInfo>().SetTeam(selectedTeam);
+                SceneManager.LoadScene("Level");
             }
         }
     }

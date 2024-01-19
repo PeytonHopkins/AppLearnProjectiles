@@ -31,7 +31,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         base.OnJoinedRoom();
         Debug.Log("Joined Room. Loading Level");
         PhotonNetwork.IsMessageQueueRunning = false;
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("SelectTeam");
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
