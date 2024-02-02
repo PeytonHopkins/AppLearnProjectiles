@@ -134,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba95840594b069b46bed4e7452611ca3, type: 3}
       propertyPath: m_Name
-      value: Apple
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -153,9 +153,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ba95840594b069b46bed4e7452611ca3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1970549429641645524}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ba95840594b069b46bed4e7452611ca3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2136552582984441789}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ba95840594b069b46bed4e7452611ca3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4998091800020496976}
@@ -227,27 +224,10 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 2136552582984441789}
   - {fileID: 4998091800020496976}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &2136552582984441789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2591153982140247029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e7cb724808c322458aa4d15f5035fa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 0
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 1
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &4998091800020496976
 MonoBehaviour:
   m_ObjectHideFlags: 0

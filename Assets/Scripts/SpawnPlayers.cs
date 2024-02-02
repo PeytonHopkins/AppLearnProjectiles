@@ -7,11 +7,10 @@ using Photon.Realtime;
 public class SpawnPlayers : MonoBehaviourPunCallbacks
 {
     private Room currentRoom;
-    private Player
-    private void Awake()
+    private Player p;
+
+    public void Awake()
     {
         currentRoom = PhotonNetwork.CurrentRoom;
-        Debug.Log(currentRoom.PlayerCount);
-
     }
 }
