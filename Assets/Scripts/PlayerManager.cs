@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviourPunCallbacks
 {
     PhotonView photonView;
     public GameObject player;
@@ -16,11 +16,8 @@ public class PlayerManager : MonoBehaviour
     }
     void Start()
     {
-        if (photonView.IsMine)
-        {
-            GameObject _player = PhotonNetwork.Instantiate(player.name, Vector3.zero, player.transform.rotation);
-            _player.GetComponent<TestingSetup>().isLocalPlayer();
-        }
+        GameObject _player = PhotonNetwork.Instantiate(player.name, Vector3.zero, player.transform.rotation);
+        _player.GetComponent<TestingSetup>().isLocalPlayer();
     }
 
     // Update is called once per frame

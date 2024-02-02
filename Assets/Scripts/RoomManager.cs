@@ -115,7 +115,10 @@ public class RoomManager : MonoBehaviourPunCallbacks
             {
                 Debug.Log("Load Level!");
                 GameObject.FindGameObjectWithTag("PlayerInfo").GetComponent<PlayerInfo>().SetTeam(selectedTeam);
-                SceneManager.LoadScene("Level");
+                if (PhotonNetwork.IsMasterClient)
+                {
+                    PhotonNetwork.LoadLevel("Level");
+                }
             }
         }
     }
