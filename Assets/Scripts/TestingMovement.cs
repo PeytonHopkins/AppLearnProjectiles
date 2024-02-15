@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class TestingMovement : MonoBehaviour
@@ -10,10 +12,13 @@ public class TestingMovement : MonoBehaviour
 
     private Vector2 walkDir;
 
+    public GameObject chatContainer;
+
     public float speed = 5f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        chatContainer = GameObject.Find("ChatContainer");
     }
 
     void Update()
@@ -22,6 +27,24 @@ public class TestingMovement : MonoBehaviour
         vertWalk = Input.GetAxisRaw("Vertical");
 
         walkDir = new Vector2(horzWalk, vertWalk).normalized;
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Quit Game
+        }
+
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            if (chatContainer.activeSelf)
+            {
+                chatContainer.SetActive(false);
+            }
+            else
+            {
+                chatContainer.SetActive(true);
+            }
+        }
     }
 
     private void FixedUpdate()
