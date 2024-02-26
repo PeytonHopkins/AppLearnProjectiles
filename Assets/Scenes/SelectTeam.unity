@@ -333,7 +333,7 @@ MonoBehaviour:
   teamButtons:
   - {fileID: 2000045533}
   - {fileID: 86182131}
-  teamMax: 2
+  teamMax: 1
   selectedTeam: 
   playerInfoObj: {fileID: 0}
 --- !u!4 &285580752
@@ -673,7 +673,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Team B
 
-    0/2
+    0/1
 
 '
   m_isRightToLeft: 0
@@ -702,7 +702,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.5
+  m_fontSize: 52.85
   m_fontSizeBase: 44.1
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1153,7 +1153,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Team A
 
-    0/2'
+    0/1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ec028ebd7ee88349814e94efb2329dd, type: 2}
   m_sharedMaterial: {fileID: -2215904065764214407, guid: 4ec028ebd7ee88349814e94efb2329dd, type: 2}
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.5
+  m_fontSize: 52.85
   m_fontSizeBase: 44.1
   m_fontWeight: 400
   m_enableAutoSizing: 1

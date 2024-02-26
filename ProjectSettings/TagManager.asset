@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerInfo
+  - PS1
+  - ShootPoint
+  - PS2
+  - Bomb_Player
+  - EGG
+  - Target
   layers:
   - Default
   - TransparentFX

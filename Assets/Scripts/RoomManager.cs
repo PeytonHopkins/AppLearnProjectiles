@@ -28,7 +28,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     private Button[] teamButtons;
 
     [SerializeField]
-    private int teamMax = 2;
+    private int teamMax = 1;
 
     public string selectedTeam = "";
     public GameObject playerInfoObj;
@@ -68,7 +68,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         int index = TeamToInt(team);
         IterateAmount(index);
-        teamTexts[index].text = $"Team {team}\n {teamAmount[index]}/2";
+        teamTexts[index].text = $"Team {team}\n {teamAmount[index]}/1";
         Debug.Log("ADDING!");
         Debug.Log(teamTexts[index].text);
     }
@@ -78,20 +78,20 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         int index = TeamToInt(team);
         teamAmount[index]--;
-        teamTexts[index].text = $"Team {team}\n {teamAmount[index]}/2";
+        teamTexts[index].text = $"Team {team}\n {teamAmount[index]}/1";
     }
 
     [PunRPC]
     private void SetTeamAmount(int[] teamAmounts)
     {
         teamAmount = teamAmounts;
-        teamTexts[0].text = $"Team A\n {teamAmount[0]}/2";
-        if (teamAmount[0] == 2)
+        teamTexts[0].text = $"Team A\n {teamAmount[0]}/1";
+        if (teamAmount[0] == 1)
         {
             teamButtons[0].interactable = false;
         }
-        teamTexts[1].text = $"Team B\n {teamAmount[1]}/2";
-        if (teamAmount[1] == 2)
+        teamTexts[1].text = $"Team B\n {teamAmount[1]}/1";
+        if (teamAmount[1] == 1)
         {
             teamButtons[1].interactable = false;
         }
@@ -106,12 +106,12 @@ public class RoomManager : MonoBehaviourPunCallbacks
         else
         {
             teamAmount[index]++;
-            if (teamAmount[index] == 2)
+            if (teamAmount[index] == 1)
             {
                 teamButtons[index].interactable = false;
             }
 
-            if(teamAmount[0] + teamAmount[1] == 4) // If at max amount of players
+            if(teamAmount[0] + teamAmount[1] == 2) // If at max amount of players
             {
                 Debug.Log("Load Level!");
                 GameObject.FindGameObjectWithTag("PlayerInfo").GetComponent<PlayerInfo>().SetTeam(selectedTeam);

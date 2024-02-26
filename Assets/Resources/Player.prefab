@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1550733f42d7dd44093466721f60e4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chatContainer: {fileID: 0}
   speed: 5
 --- !u!50 &8267541584560685907
 Rigidbody2D:
