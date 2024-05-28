@@ -6,7 +6,7 @@ public class PlayerInfo : MonoBehaviour
 {
     // The purpose of this object is essentially to hold the selected team and take it to the next scene for it to manage.
     
-    private string selectedTeam;
+    public string selectedTeam;
     public int score; // We can add whatever to this script, these are just some of the things I imagine would be in it. 
     public string playerName;
 

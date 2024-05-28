@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestingSetup : MonoBehaviour
 {
-    public TestingMovement movement;
+    public Player_BA_Test movement;
     // Start is called before the first frame update
     void Start()
     {

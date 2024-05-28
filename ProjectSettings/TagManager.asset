@@ -11,6 +11,10 @@ TagManager:
   - Bomb_Player
   - EGG
   - Target
+  - Arrow
+  - ETVX
+  - ETVY
+  - Bounce
   layers:
   - Default
   - TransparentFX

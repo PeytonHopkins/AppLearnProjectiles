@@ -14,10 +14,13 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     private List<RoomInfo> roomItems = new List<RoomInfo>();
     public GameObject joinCodeObj;
     private TMP_InputField joinCode;
+
+    public GameObject joinBtn;
     private void Start()
     {
         PhotonNetwork.JoinLobby();
         joinCode = joinCodeObj.GetComponent<TMP_InputField>();
+        joinBtn.GetComponent<Button>().interactable = false;
     }
 
     public override void OnJoinedLobby()
@@ -131,7 +134,34 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public void OnJoinLobbyClick()
     {
-        PhotonNetwork.JoinOrCreateRoom(joinCode.text, null, null);
+        if(joinCode.text.Length == 4)
+        {
+            PhotonNetwork.JoinOrCreateRoom(joinCode.text, null, null);
+        }
+        else
+        {
+            Debug.Log("Invalid code, please enter a code with a length of 4 characters.");
+        }
+        
+    }
+
+    public void OnJoinLobbyValueChange()
+    {
+        joinCode.text = joinCode.text.ToUpper(); // ensure capitalization as lobby codes wont have lowercase.
+
+        if(joinCode.text == "")
+        {
+            joinBtn.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            joinBtn.GetComponent<Button>().interactable = true;
+        }
+
+        if(joinCode.text.Length > 4)
+        {
+            joinCode.text = joinCode.text[..4];
+        }
     }
 
 }

@@ -16,8 +16,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
     private TextMeshProUGUI roomName;
     private Room currentRoom;
 
-    public GameObject player;
-
     private PhotonView photonView;
 
     [SerializeField]
@@ -134,14 +132,16 @@ public class RoomManager : MonoBehaviourPunCallbacks
         switch (selectedTeam)
         {
             case "A":
+                photonView.RPC("RemoveFromTeam", RpcTarget.All, "A");
                 SelectTeam("B");
                 teamButtons[0].interactable = true;
-                photonView.RPC("RemoveFromTeam", RpcTarget.All, "A");
+                
                 break;
             case "B":
+                photonView.RPC("RemoveFromTeam", RpcTarget.All, "B");
                 SelectTeam("A");
                 teamButtons[1].interactable = true;
-                photonView.RPC("RemoveFromTeam", RpcTarget.All, "B");
+                
                 break;
             default:
                 break;

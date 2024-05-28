@@ -90,10 +90,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.59, y: 3.23}
+  m_Size: {x: 45.010002, y: 13.0326805}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &7930121203539992781
@@ -160,7 +160,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 45.010002, y: 13.0326805}
-    newSize: {x: 13.59, y: 3.23}
+    newSize: {x: 45.010002, y: 13.0326805}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -205,7 +205,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 45.010002, y: 13.0326805}
-    newSize: {x: 13.59, y: 3.23}
+    newSize: {x: 45.010002, y: 13.0326805}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -536,7 +536,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 45.010002, y: 13.0326805}
-    newSize: {x: 13.59, y: 3.23}
+    newSize: {x: 45.010002, y: 13.0326805}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -641,7 +641,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 45.010002, y: 13.0326805}
-    newSize: {x: 13.59, y: 3.23}
+    newSize: {x: 45.010002, y: 13.0326805}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1121,7 +1121,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 45.010002, y: 13.0326805}
-    newSize: {x: 13.59, y: 3.23}
+    newSize: {x: 45.010002, y: 13.0326805}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1601,7 +1601,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 45.010002, y: 13.0326805}
-    newSize: {x: 13.59, y: 3.23}
+    newSize: {x: 45.010002, y: 13.0326805}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
